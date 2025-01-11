@@ -9,7 +9,7 @@ export default {
 export const Default = {
   args: {
     children: "Hello world",
-    cardWidth: "w-1/2",
+    cardWidth: "",
     customCss: ""
   },
 };
