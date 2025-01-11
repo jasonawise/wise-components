@@ -12,7 +12,8 @@
     "declarationMap": true,
     "sourceMap": true,
     "skipLibCheck": true,
-    "strict": true
+    "strict": true,
+    "types": ["jest"]
   },
   "include": ["src/**/*", ".storybook/**/*"],
   "exclude": ["node_modules", "dist"]
