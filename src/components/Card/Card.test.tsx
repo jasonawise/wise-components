@@ -35,3 +35,30 @@ describe("Card component", () => {
     expect(container.firstChild).toHaveClass("w-1/2 bg-red-500");
   });
 });
+it("matches snapshot with default props", () => {
+  const { asFragment } = render(<Card>Snapshot Test Content</Card>);
+  expect(asFragment()).toMatchSnapshot();
+});
+
+it("matches snapshot with custom width", () => {
+  const { asFragment } = render(
+    <Card cardWidth="w-1/2">Snapshot Test Content</Card>
+  );
+  expect(asFragment()).toMatchSnapshot();
+});
+
+it("matches snapshot with custom CSS", () => {
+  const { asFragment } = render(
+    <Card customCss="bg-red-500">Snapshot Test Content</Card>
+  );
+  expect(asFragment()).toMatchSnapshot();
+});
+
+it("matches snapshot with custom width and custom CSS", () => {
+  const { asFragment } = render(
+    <Card cardWidth="w-1/2" customCss="bg-red-500">
+      Snapshot Test Content
+    </Card>
+  );
+  expect(asFragment()).toMatchSnapshot();
+});
